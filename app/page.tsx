@@ -1,9 +1,11 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import {
- 
+  
   Mail,
- 
+  
   Download,
   ExternalLink,
   Cpu,
@@ -423,7 +425,7 @@ export default function TranThiPhuongPortfolio() {
           />
           <div className="flex flex-wrap justify-center gap-4">
             <Button href="mailto:ttphuong10404@gmail.com" primary><Mail size={16} /> Email Me</Button>
-           
+            
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-slate-400">
             <span className="inline-flex items-center gap-2"><MapPin size={15} /> Ho Chi Minh City, Vietnam</span>
