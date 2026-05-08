@@ -1,9 +1,9 @@
-"use client";
-
 import React from "react";
 import { motion } from "framer-motion";
 import {
+ 
   Mail,
+ 
   Download,
   ExternalLink,
   Cpu,
@@ -120,7 +120,13 @@ const awards = [
   "Collaborator — HUTECH Library & Student Affairs Office",
 ];
 
-function SectionTitle({ eyebrow, title, description }) {
+type SectionTitleProps = {
+  eyebrow: string;
+  title: string;
+  description?: string;
+};
+
+function SectionTitle({ eyebrow, title, description }: SectionTitleProps) {
   return (
     <motion.div
       variants={fadeUp}
@@ -137,11 +143,19 @@ function SectionTitle({ eyebrow, title, description }) {
   );
 }
 
-function Badge({ children }) {
+function Badge({ children }: { children: React.ReactNode }) {
   return <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200">{children}</span>;
 }
 
-function Button({ children, href = "#", primary = false }) {
+function Button({
+  children,
+  href = "#",
+  primary = false,
+}: {
+  children: React.ReactNode;
+  href?: string;
+  primary?: boolean;
+}) {
   return (
     <a
       href={href}
@@ -409,8 +423,7 @@ export default function TranThiPhuongPortfolio() {
           />
           <div className="flex flex-wrap justify-center gap-4">
             <Button href="mailto:ttphuong10404@gmail.com" primary><Mail size={16} /> Email Me</Button>
-            <Button href="#">GitHub</Button>
-            <Button href="#">LinkedIn</Button>
+           
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-slate-400">
             <span className="inline-flex items-center gap-2"><MapPin size={15} /> Ho Chi Minh City, Vietnam</span>
